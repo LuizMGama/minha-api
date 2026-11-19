@@ -10,8 +10,6 @@ export async function authenticate(req, res, next) {
     if (type !== "Bearer" || !token) {
         throw new AppError("Token não informado", 401)
     }
-    console.log("type", type)
-    console.log("token", token)
 
     const payload = jwt.verify(token, process.env.JWT_SECRET)
 

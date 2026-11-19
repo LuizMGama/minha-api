@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Baldur's Gate 3",
+    "platform": "PC",
+    "status": "jogando",
+    "rating": 9.6
+  },
+  {
+    "title": "Clair Obscur: Expedition 33",
+    "platform": "PC",
+    "status": "concluido",
+    "rating": 9.1
+  },
+  {
+    "title": "Dishonored",
+    "platform": "PC",
+    "status": "concluido",
+    "rating": 9.1
+  },
+  {
+    "title": "Dishonored 2",
+    "platform": "PC",
+    "status": "concluido",
+    "rating": 8.6
+  },
+  {
+    "title": "Dishonored: Death of the Outsider",
+    "platform": "PC",
+    "status": "quero-jogar",
+    "rating": 8.1
+  },
+  {
+    "title": "Divinity: Original Sin 2",
+    "platform": "PC",
+    "status": "jogando",
+    "rating": 9.3
+  },
+  {
+    "title": "Portal 2",
+    "platform": "PC",
+    "status": "concluido",
+    "rating": 9.5
+  },
+  {
+    "title": "Cyberpunk 2077",
+    "platform": "PC",
+    "status": "jogando",
+    "rating": 8.6
+  },
+  {
+    "title": "Sekiro: Shadows Die Twice",
+    "platform": "PC",
+    "status": "quero-jogar",
+    "rating": 8.8
+  },
+  {
+    "title": "Hades",
+    "platform": "PC",
+    "status": "concluido",
+    "rating": 9.3
+  },
+  {
+    "title": "Hades II",
+    "platform": "PC",
+    "status": "quero-jogar",
+    "rating": 9.4
+  },
+  {
+    "title": "Red Dead Redemption 2",
+    "platform": "PC",
+    "status": "concluido",
+    "rating": 9.3
+  },
+  {
+    "title": "DARK SOULS: REMASTERED",
+    "platform": "PC",
+    "status": "concluido",
+    "rating": 8.4
+  },
+  {
+    "title": "NieR:Automata",
+    "platform": "PC",
+    "status": "quero-jogar",
+    "rating": 8.4
+  },
+  {
+    "title": "Resident Evil 2",
+    "platform": "PC",
+    "status": "concluido",
+    "rating": 8.9
+  },
+  {
+    "title": "Ghost of Tsushima: Director's Cut",
+    "platform": "PC",
+    "status": "jogando",
+    "rating": 8.9
+  },
+  {
+    "title": "Dead Cells",
+    "platform": "PC",
+    "status": "jogando",
+    "rating": 8.9
+  },
+  {
+    "title": "Cuphead",
+    "platform": "PC",
+    "status": "concluido",
+    "rating": 8.8
+  },
+  {
+    "title": "Ori and the Will of the Wisps",
+    "platform": "PC",
+    "status": "quero-jogar",
+    "rating": 8.8
+  },
+  {
+    "title": "Batman: Arkham Knight",
+    "platform": "PC",
+    "status": "concluido",
+    "rating": 7.0
+  }
+]

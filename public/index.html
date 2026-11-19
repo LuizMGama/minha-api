@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>Biblioteca de Jogos</title>
+    <link rel="stylesheet" href="/app/style.css">
+    <script src="/app/app.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="/app/"><span class="brand-icon" aria-hidden="true">＋</span> Biblioteca<span class="brand-detail">de Jogos</span></a>
+        <div id="session" class="session" hidden><span id="user-name"></span><button id="logout" class="secondary" type="button">Sair</button></div>
+    </header>
+    <main>
+        <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+        <section id="auth-view" class="auth-layout">
+            <div class="intro">
+                <p class="eyebrow">SUA PRÓXIMA PARTIDA COMEÇA AQUI</p>
+                <h1>Todos os seus jogos.<br><span>Um lugar só.</span></h1>
+                <p>Organize o que você quer jogar, acompanhe suas partidas e guarde suas conquistas.</p>
+                <div class="status-preview" aria-label="Status disponíveis"><span class="badge quero-jogar">Quero jogar</span><span class="badge jogando">Jogando</span><span class="badge concluido">Concluído</span></div>
+            </div>
+            <div class="panel auth-panel">
+                <div class="auth-tabs" role="group" aria-label="Acesso à conta">
+                    <button id="login-tab" type="button" class="active" aria-pressed="true">Entrar</button>
+                    <button id="register-tab" type="button" aria-pressed="false">Criar conta</button>
+                </div>
+                <form id="login-form">
+                    <h2>Bom ter você de volta</h2><p class="muted">Entre para acessar sua biblioteca.</p>
+                    <fieldset>
+                        <label for="login-email">E-mail</label><input id="login-email" name="email" type="email" autocomplete="username" required>
+                        <label for="login-password">Senha</label><input id="login-password" name="password" type="password" autocomplete="current-password" required>
+                        <button class="primary full" type="submit">Entrar na biblioteca</button>
+                    </fieldset>
+                </form>
+                <form id="register-form" hidden>
+                    <h2>Sua biblioteca começa aqui</h2><p class="muted">Preencha os dados para criar sua conta.</p>
+                    <fieldset>
+                        <label for="register-name">Nome</label><input id="register-name" name="name" autocomplete="name" required>
+                        <label for="register-email">E-mail</label><input id="register-email" name="email" type="email" autocomplete="username" required>
+                        <label for="register-password">Senha</label><input id="register-password" name="password" type="password" autocomplete="new-password" required>
+                        <label for="security-question">Pergunta de segurança</label><input id="security-question" name="securityQuestion" placeholder="Ex.: Qual foi seu primeiro jogo?" autocomplete="off" required>
+                        <label for="security-answer">Resposta de segurança</label><input id="security-answer" name="securityAnswer" type="password" autocomplete="off" required>
+                        <button class="primary full" type="submit">Criar minha conta</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <section id="library-view" hidden>
+            <div class="library-heading"><div><p class="eyebrow">SUA COLEÇÃO PESSOAL</p><h1>Minha biblioteca</h1><p class="muted">Cada jogo, uma nova história.</p></div><span id="game-count" class="count">0 jogos</span></div>
+            <div class="library-layout">
+                <aside class="panel editor">
+                    <h2 id="editor-title">Adicionar jogo</h2><p class="muted">Reserve espaço para a próxima aventura.</p>
+                    <form id="game-form"><fieldset>
+                        <label for="game-title">Título</label><input id="game-title" name="title" placeholder="Ex.: Hollow Knight" required>
+                        <label for="game-platform">Plataforma</label><input id="game-platform" name="platform" placeholder="Ex.: PC, PlayStation, Switch" required>
+                        <label for="game-status">Status</label><select id="game-status" name="status"><option value="quero-jogar">Quero jogar</option><option value="jogando">Jogando</option><option value="concluido">Concluído</option></select>
+                        <label for="game-rating">Nota <span class="muted">(opcional)</span></label><input id="game-rating" name="rating" type="number" min="0" max="10" step="any" placeholder="De 0 a 10">
+                        <button id="save-game" class="primary full" type="submit">Adicionar jogo</button>
+                        <button id="cancel-edit" class="secondary full" type="button" hidden>Cancelar edição</button>
+                    </fieldset></form>
+                </aside>
+                <div><div class="collection-heading"><h2>Seus jogos</h2><button id="reload" class="secondary" type="button">Atualizar lista</button></div><p id="list-state" class="empty" role="status">Carregando jogos…</p><div id="games" class="game-grid"></div></div>
+            </div>
+        </section>
+    </main>
+    <footer>Biblioteca de Jogos <span>·</span> Uma partida de cada vez.</footer>
+    <template id="game-template">
+        <article class="game-card"><div class="card-top"><span class="badge"></span><span class="rating"></span></div><h3></h3><p class="platform"></p><div class="card-actions"><button class="edit secondary" type="button">Editar</button><button class="delete danger" type="button">Excluir</button></div></article>
+    </template>
+</body>
+</html>

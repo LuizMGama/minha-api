@@ -1,9 +1,11 @@
 import express from 'express'
 import cors from 'cors'
+import { fileURLToPath } from 'node:url'
 import { connectToDatabase } from './config/database.js'
 import { authRouter } from './routes/auth.route.js'
 import { userRouter } from './routes/user.route.js'
 import { logRouter } from './routes/log.route.js'
+import { gameRouter } from './routes/game.route.js'
 import { errorHandler, notFoundHandler } from './middlewares/error.middleware.js'
 
 if (!process.env.JWT_SECRET) {
@@ -15,6 +17,7 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
+app.use('/app', express.static(fileURLToPath(new URL('./public/', import.meta.url))))
 
 app.get('/', (req, res) => {
     res.json({
@@ -25,6 +28,7 @@ app.get('/', (req, res) => {
 app.use("/auth", authRouter)
 app.use("/users", userRouter)
 app.use("/logs", logRouter)
+app.use("/games", gameRouter)
 
 // Precisam ficar depois de todas as rotas
 app.use(notFoundHandler)

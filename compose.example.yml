@@ -1,0 +1,13 @@
+services:
+  mongo:
+    image: mongo:8
+    ports:
+      - "127.0.0.1:27018:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME:?Defina MONGO_INITDB_ROOT_USERNAME no .env}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD:?Defina MONGO_INITDB_ROOT_PASSWORD no .env}
+    volumes:
+      - biblioteca-demo-mongo:/data/db
+
+volumes:
+  biblioteca-demo-mongo:
