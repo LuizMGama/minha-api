@@ -1,5 +1,12 @@
 # Biblioteca de Jogos
 
+**Disciplina:** Programação Web — Fatec
+
+**Integrantes:**
+
+- **Júlio César Ravacci Jara** — julio.jara@aluno.cps.sp.gov.br
+- **Luiz Eduardo Gama** — luiz.gama@aluno.cps.sp.gov.br
+
 Biblioteca pessoal desenvolvida para a disciplina de Programação Web a partir da API do professor. Permite criar uma conta, entrar, organizar jogos por plataforma e status (Quero jogar, Jogando e Concluído), atribuir uma nota opcional entre 0 e 10, editar e excluir jogos próprios.
 
 ## Tecnologias e organização
@@ -93,4 +100,4 @@ Durante a validação, o script de demonstração foi executado em um banco Mong
 
 A aplicação também foi iniciada na porta 3002, utilizando o banco recriado. O login da conta de demonstração foi realizado com sucesso, e os 20 jogos foram exibidos corretamente na interface web.
 
-O arquivo `compose.example.yml` foi validado com `docker compose config --quiet`, sem erros. A inicialização desse Compose em um ambiente totalmente novo ainda não foi testada. Para reproduzir a aplicação em outro computador, devem ser seguidas as instruções de configuração e execução apresentadas neste README.
+O arquivo `compose.example.yml` foi validado com `docker compose config --quiet`, sem erros. A inicialização desse Compose em um ambiente totalmente novo ainda não foi testada. Para reproduzir a aplicação em outro computador, devem ser sxxeguidas as instruções de configuração e execução apresentadas neste README.
